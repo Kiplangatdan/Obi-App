@@ -26,11 +26,11 @@ var map = {
 		9
 	],
 	"../pages/checkout/checkout.module": [
-		300,
+		301,
 		8
 	],
 	"../pages/contact/contact.module": [
-		301,
+		300,
 		7
 	],
 	"../pages/home/home.module": [
@@ -102,7 +102,7 @@ var TabsPage = (function () {
         this.tab4Root = 'ContactPage';
     }
     TabsPage = __decorate([
-        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["m" /* Component */])({template:/*ion-inline-start:"/home/danco/Ionic/Obi_app/src/pages/tabs/tabs.html"*/'<ion-tabs color="dark">\n  <ion-tab [root]="tab1Root" tabTitle="Home" tabIcon="home"></ion-tab>\n  <ion-tab [root]="tab2Root" tabTitle="Condolences" tabIcon="list"></ion-tab>\n  <ion-tab [root]="tab3Root" tabTitle="Appreciation" tabIcon="basket"></ion-tab>\n  <ion-tab [root]="tab4Root" tabTitle="Contact" tabIcon="contacts"></ion-tab>\n</ion-tabs>\n'/*ion-inline-end:"/home/danco/Ionic/Obi_app/src/pages/tabs/tabs.html"*/
+        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["m" /* Component */])({template:/*ion-inline-start:"/home/danco/Ionic/ObiApp/src/pages/tabs/tabs.html"*/'<ion-tabs color="dark">\n  <ion-tab [root]="tab1Root" tabTitle="Home" tabIcon="home"></ion-tab>\n  <ion-tab [root]="tab2Root" tabTitle="Condolences" tabIcon="list"></ion-tab>\n  <ion-tab [root]="tab3Root" tabTitle="Appreciation" tabIcon="basket"></ion-tab>\n  <ion-tab [root]="tab4Root" tabTitle="Contact" tabIcon="contacts"></ion-tab>\n</ion-tabs>\n'/*ion-inline-end:"/home/danco/Ionic/ObiApp/src/pages/tabs/tabs.html"*/
         }),
         __metadata("design:paramtypes", [])
     ], TabsPage);
@@ -350,11 +350,11 @@ var PostsProvider = (function () {
         this.data = null;
     }
     PostsProvider.prototype.load = function (url, page) {
-        var _this = this;
         // set pagination
-        if (!page) {
-            var page_1 = '1';
-        }
+        // if( !page ) {
+        //   let page = '1';
+        // }
+        var _this = this;
         return new Promise(function (resolve, reject) {
             var concat;
             // check if url already has a query param
@@ -454,8 +454,8 @@ var AppModule = (function () {
                 __WEBPACK_IMPORTED_MODULE_3_ionic_angular__["d" /* IonicModule */].forRoot(__WEBPACK_IMPORTED_MODULE_4__app_component__["a" /* MyApp */], {}, {
                     links: [
                         { loadChildren: '../pages/cart/cart.module#CartPageModule', name: 'CartPage', segment: 'cart', priority: 'low', defaultHistory: [] },
-                        { loadChildren: '../pages/checkout/checkout.module#CheckoutPageModule', name: 'CheckoutPage', segment: 'checkout', priority: 'low', defaultHistory: [] },
                         { loadChildren: '../pages/contact/contact.module#ContactPageModule', name: 'ContactPage', segment: 'contact', priority: 'low', defaultHistory: [] },
+                        { loadChildren: '../pages/checkout/checkout.module#CheckoutPageModule', name: 'CheckoutPage', segment: 'checkout', priority: 'low', defaultHistory: [] },
                         { loadChildren: '../pages/home/home.module#HomePageModule', name: 'HomePage', segment: 'home', priority: 'low', defaultHistory: [] },
                         { loadChildren: '../pages/login-modal/login-modal.module#LoginModalPageModule', name: 'LoginModalPage', segment: 'login-modal', priority: 'low', defaultHistory: [] },
                         { loadChildren: '../pages/post-detail/post-detail.module#PostDetailPageModule', name: 'PostDetailPage', segment: 'post-detail', priority: 'low', defaultHistory: [] },
@@ -545,15 +545,18 @@ var MyApp = (function () {
     };
     __decorate([
         Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["_8" /* ViewChild */])(__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["i" /* Nav */]),
-        __metadata("design:type", typeof (_a = typeof __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["i" /* Nav */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["i" /* Nav */]) === "function" && _a || Object)
+        __metadata("design:type", __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["i" /* Nav */])
     ], MyApp.prototype, "nav", void 0);
     MyApp = __decorate([
-        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["m" /* Component */])({template:/*ion-inline-start:"/home/danco/Ionic/Obi_app/src/app/app.html"*/'<ion-menu *ngIf="menus" [content]="content">\n\n  <ion-header>\n    <ion-toolbar>\n      <ion-title></ion-title>\n    </ion-toolbar>\n  </ion-header>\n\n  <ion-content>\n    <ion-list>\n		<ion-list-header text-wrap *ngIf="login_data">\n		<ion-avatar *ngIf="login_data.avatar">\n		  <img [src]="login_data.avatar" />\n		</ion-avatar>\n		<p class="loggedin-msg"><b>login_data.message</b></p>\n\n		</ion-list-header>\n\n		<button ion-item icon-left *ngFor="let item of menus" (click)="menuLink(item)">\n			<ion-icon name="{{item.icon}}"></ion-icon>\n		{{item.title}}\n		</button>\n		\n		<div padding>\n			<button ion-button block icon-left class="menu-login-button" (click)="openLoginModal()">\n			<ion-icon name="log-in"></ion-icon>\n			<span *ngIf="login_data">Logout</span><span *ngIf="!login_data">Login</span></button>\n		</div>\n\n    </ion-list>\n\n  </ion-content>\n\n</ion-menu>\n\n<ion-nav id="nav" #content></ion-nav>'/*ion-inline-end:"/home/danco/Ionic/Obi_app/src/app/app.html"*/
+        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["m" /* Component */])({template:/*ion-inline-start:"/home/danco/Ionic/ObiApp/src/app/app.html"*/'<ion-menu *ngIf="menus" [content]="content">\n\n  <ion-header>\n    <ion-toolbar>\n      <ion-title></ion-title>\n    </ion-toolbar>\n  </ion-header>\n\n  <ion-content>\n    <ion-list>\n		<ion-list-header text-wrap *ngIf="login_data">\n		<ion-avatar *ngIf="login_data.avatar">\n		  <img [src]="login_data.avatar" />\n		</ion-avatar>\n		<p class="loggedin-msg"><b>login_data.message</b></p>\n\n		</ion-list-header>\n\n		<button ion-item icon-left *ngFor="let item of menus" (click)="menuLink(item)">\n			<ion-icon name="{{item.icon}}"></ion-icon>\n		{{item.title}}\n		</button>\n		\n		<div padding>\n			<button ion-button block icon-left class="menu-login-button" (click)="openLoginModal()">\n			<ion-icon name="log-in"></ion-icon>\n			<span *ngIf="login_data">Logout</span><span *ngIf="!login_data">Login</span></button>\n		</div>\n\n    </ion-list>\n\n  </ion-content>\n\n</ion-menu>\n\n<ion-nav id="nav" #content></ion-nav>'/*ion-inline-end:"/home/danco/Ionic/ObiApp/src/app/app.html"*/
         }),
-        __metadata("design:paramtypes", [typeof (_b = typeof __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["l" /* Platform */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["l" /* Platform */]) === "function" && _b || Object, typeof (_c = typeof __WEBPACK_IMPORTED_MODULE_2__ionic_native_status_bar__["a" /* StatusBar */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_2__ionic_native_status_bar__["a" /* StatusBar */]) === "function" && _c || Object, typeof (_d = typeof __WEBPACK_IMPORTED_MODULE_3__ionic_native_splash_screen__["a" /* SplashScreen */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_3__ionic_native_splash_screen__["a" /* SplashScreen */]) === "function" && _d || Object, typeof (_e = typeof __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["g" /* MenuController */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["g" /* MenuController */]) === "function" && _e || Object, typeof (_f = typeof __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["h" /* ModalController */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["h" /* ModalController */]) === "function" && _f || Object])
+        __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["l" /* Platform */],
+            __WEBPACK_IMPORTED_MODULE_2__ionic_native_status_bar__["a" /* StatusBar */],
+            __WEBPACK_IMPORTED_MODULE_3__ionic_native_splash_screen__["a" /* SplashScreen */],
+            __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["g" /* MenuController */],
+            __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["h" /* ModalController */]])
     ], MyApp);
     return MyApp;
-    var _a, _b, _c, _d, _e, _f;
 }());
 
 //# sourceMappingURL=app.component.js.map
@@ -681,10 +684,9 @@ var Configure = (function () {
     };
     Configure = __decorate([
         Object(__WEBPACK_IMPORTED_MODULE_1__angular_core__["A" /* Injectable */])(),
-        __metadata("design:paramtypes", [typeof (_a = typeof __WEBPACK_IMPORTED_MODULE_0__angular_common_http__["a" /* HttpClient */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_0__angular_common_http__["a" /* HttpClient */]) === "function" && _a || Object])
+        __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_0__angular_common_http__["a" /* HttpClient */]])
     ], Configure);
     return Configure;
-    var _a;
 }());
 
 //# sourceMappingURL=configure.js.map

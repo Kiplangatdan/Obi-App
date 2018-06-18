@@ -19,9 +19,9 @@ export class PostsProvider {
   load(url:string, page) {
 
     // set pagination
-    if( !page ) {
-      let page = '1';
-    }
+    // if( !page ) {
+    //   let page = '1';
+    // }
 
     return new Promise( (resolve, reject) => {
 

@@ -9,6 +9,7 @@ import {Storage} from '@ionic/storage';
 })
 export class HomePage {
 
+  galleryType = 'regular';
   loginModal: any;
   loggedin: boolean = false
 
@@ -38,19 +39,19 @@ export class HomePage {
       }
     })
 
-  	
+
   }
 
   pushPage(page) {
 
     this.navCtrl.push( page );
-    
+
   }
 
   openLoginModal() {
 
     this.loginModal = this.modalCtrl.create( 'LoginModalPage' );
-    
+
     this.loginModal.present();
 
   }
