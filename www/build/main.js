@@ -26,11 +26,11 @@ var map = {
 		9
 	],
 	"../pages/checkout/checkout.module": [
-		301,
+		300,
 		8
 	],
 	"../pages/contact/contact.module": [
-		300,
+		301,
 		7
 	],
 	"../pages/home/home.module": [
@@ -454,8 +454,8 @@ var AppModule = (function () {
                 __WEBPACK_IMPORTED_MODULE_3_ionic_angular__["d" /* IonicModule */].forRoot(__WEBPACK_IMPORTED_MODULE_4__app_component__["a" /* MyApp */], {}, {
                     links: [
                         { loadChildren: '../pages/cart/cart.module#CartPageModule', name: 'CartPage', segment: 'cart', priority: 'low', defaultHistory: [] },
-                        { loadChildren: '../pages/contact/contact.module#ContactPageModule', name: 'ContactPage', segment: 'contact', priority: 'low', defaultHistory: [] },
                         { loadChildren: '../pages/checkout/checkout.module#CheckoutPageModule', name: 'CheckoutPage', segment: 'checkout', priority: 'low', defaultHistory: [] },
+                        { loadChildren: '../pages/contact/contact.module#ContactPageModule', name: 'ContactPage', segment: 'contact', priority: 'low', defaultHistory: [] },
                         { loadChildren: '../pages/home/home.module#HomePageModule', name: 'HomePage', segment: 'home', priority: 'low', defaultHistory: [] },
                         { loadChildren: '../pages/login-modal/login-modal.module#LoginModalPageModule', name: 'LoginModalPage', segment: 'login-modal', priority: 'low', defaultHistory: [] },
                         { loadChildren: '../pages/post-detail/post-detail.module#PostDetailPageModule', name: 'PostDetailPage', segment: 'post-detail', priority: 'low', defaultHistory: [] },
@@ -532,7 +532,7 @@ var MyApp = (function () {
         });
     }
     MyApp.prototype.doMenus = function () {
-        this.menus = [{ title: 'Home', slug: 'HomePage', icon: 'home' }, { title: 'Condolences', slug: 'WooListPage', icon: 'basket' }, { title: 'Appreciation', slug: 'PostListPage', icon: 'list' }, { title: 'Contact', slug: 'ContactPage', icon: 'mail' }];
+        this.menus = [{ title: 'Home', slug: 'HomePage', icon: 'home' }, { title: 'Obituary', slug: 'WooListPage', icon: 'md-add' }, { title: 'Appreciation', slug: 'PostListPage', icon: 'ios-flower' }, { title: 'Memorials', slug: 'ContactPage', icon: 'ios-book-outline' }];
         this.nav.setRoot(__WEBPACK_IMPORTED_MODULE_4__pages_tabs_tabs__["a" /* TabsPage */]);
     };
     MyApp.prototype.menuLink = function (item) {

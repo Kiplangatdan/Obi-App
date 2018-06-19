@@ -9,13 +9,13 @@
   </ion-navbar>
   <ion-toolbar no-border-top class="toolbar toolbar-ios statusbar-padding">
     <ion-segment mode="md" [(ngModel)]="galleryType" class="segment segment-ios ng-valid ng-touched ng-dirty">
-      <ion-segment-button value="pinterest">
+      <ion-segment-button value="obituaries">
         Obituaries
       </ion-segment-button>
-      <ion-segment-button value="regular">
+      <ion-segment-button value="appreciations">
         Appreciations
       </ion-segment-button>
-      <ion-segment-button value="pinterest">
+      <ion-segment-button value="memorials">
         Memorials
       </ion-segment-button>
     </ion-segment>
@@ -25,27 +25,33 @@
 <ion-content padding>
   <div [ngSwitch]="galleryType">
     <!-- Responsive Layout with Ion Grid-->
-    <ion-grid *ngSwitchCase="'regular'">
-      <ion-row>
-        <ion-col col-6 col-md-4 col-xl-3 *ngFor="let image of [1,2,3,4,5,6,7,8,9,10,11,12]">
-          <div class="image-container" [style.background-image]="'url(assets/imgs/' + image + '.jpg)'"></div>
-        </ion-col>
-      </ion-row>
-    </ion-grid>
-
-    <!-- More Pinterest floating gallery style -->
-    <div class="images" *ngSwitchCase="'pinterest'">
+    <div class="images" *ngSwitchCase="'obituaries'">
       <div class="one-image" *ngFor="let image of [1,2,3,4,5,6,7,8,9,10,11,12]">
         <img src="assets/imgs/{{image}}.jpg">
+        Nelson Mandela
+      </div>
+    </div>
+
+    <!-- More Pinterest floating gallery style -->
+    <div class="images" *ngSwitchCase="'appreciations'">
+      <div class="one-image" *ngFor="let image of [21,22,23,24,25,26,27,28,29,30,31,32]">
+        <img src="assets/imgs/{{image}}.jpg">
+        Winny Mandela
+      </div>
+    </div>
+    <div class="images" *ngSwitchCase="'memorials'">
+      <div class="one-image" *ngFor="let image of [41,42,43,44,45,46,47,48,49,50,51,52]">
+        <img src="assets/imgs/{{image}}.jpg">
+        Wangari Maathai
       </div>
     </div>
   </div>
 
   <!-- Floating Button -->
+  <!--<ion-fab right bottom>-->
+    <!--<button ion-fab color="primary"><ion-icon name="add"></ion-icon></button>-->
+  <!--</ion-fab>-->
   <ion-fab right bottom>
-    <button ion-fab color="primary"><ion-icon name="add"></ion-icon></button>
-  </ion-fab>
-  <!-- <ion-fab right bottom>
     <button ion-fab color="primary"><ion-icon name="share"></ion-icon></button>
     <ion-fab-list side="top">
       <button ion-fab><ion-icon name="logo-facebook"></ion-icon></button>
@@ -54,5 +60,5 @@
       <button ion-fab><ion-icon name="logo-googleplus"></ion-icon></button>
         <button ion-fab><ion-icon name="logo-whatsapp"></ion-icon></button>
     </ion-fab-list>
-  </ion-fab> -->
+  </ion-fab>
 </ion-content>

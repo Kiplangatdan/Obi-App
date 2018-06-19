@@ -9,7 +9,7 @@ import {Storage} from '@ionic/storage';
 })
 export class HomePage {
 
-  galleryType = 'regular';
+  galleryType = 'obituaries';
   loginModal: any;
   loggedin: boolean = false
 

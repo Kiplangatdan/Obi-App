@@ -25679,7 +25679,7 @@ ion-navbar.toolbar {
 }
 
 .toolbar-background {
-  background: #333;
+  background: #ff8f68;
 }
 
 .toolbar, .toolbar-title, .toolbar ion-icon {
@@ -25721,7 +25721,7 @@ ion-navbar.toolbar {
 }
 
 .menu-inner .content {
-  background-color: #333;
+  background-color: #ff8f68;
 }
 
 .menu-inner .content .item {
