@@ -33,7 +33,7 @@ export class MyApp {
 
   doMenus() {
 
-    this.menus = [{ title: 'Home', slug: 'HomePage', icon: 'home' },{ title: 'Obituary', slug: 'WooListPage', icon: 'md-add' },{ title: 'Appreciation', slug: 'PostListPage', icon: 'ios-flower' },{ title: 'Memorials', slug: 'ContactPage', icon: 'ios-book-outline' }]
+    this.menus = [{ title: 'Home', slug: 'HomePage', icon: 'home' },{ title: 'Condolences', slug: 'WooListPage', icon: 'basket' },{ title: 'Appreciation', slug: 'PostListPage', icon: 'list' },{ title: 'Contact', slug: 'ContactPage', icon: 'mail' }]
 
     this.nav.setRoot( TabsPage )
   }
